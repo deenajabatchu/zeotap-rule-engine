@@ -11,8 +11,6 @@ This project implements a rule engine that evaluates user eligibility based on p
 - `validate.py`: (Optional) Contains validation functions for rules.
 - `test_cases.py`: Contains test cases to validate the rule engine functionality.
 - `README.md`: Documentation for the project.
-- `requirements.txt`: (Optional) Lists external dependencies.
-- `.gitignore`: (Optional) Specifies files to be ignored by Git.
 
 ## Usage
 
