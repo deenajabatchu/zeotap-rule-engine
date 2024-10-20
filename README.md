@@ -18,4 +18,4 @@ This project implements a rule engine that evaluates user eligibility based on p
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/deenajabatchu/zeotap-rule-engine
