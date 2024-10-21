@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # test_cases.py
 from rule_engine import create_rule, combine_rules, evaluate_rule
 
@@ -20,7 +20,7 @@ def run_tests():
 
 if __name__ == "__main__":
     run_tests()
-=======
+
 # test_cases.py
 from rule_engine import create_rule, combine_rules, evaluate_rule
 
@@ -42,4 +42,3 @@ def run_tests():
 
 if __name__ == "__main__":
     run_tests()
->>>>>>> e5fef81 (Initial commit with rule engine code)
