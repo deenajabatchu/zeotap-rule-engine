@@ -83,22 +83,6 @@ def create_rule(rule_string):
     return root_node
 
 
-def combine_rules(rules):
-    """
-    Takes a list of rule ASTs and combines them into a single AST using OR as the combining operator.
-    """
-    if len(rules) == 0:
-        return None
-    if len(rules) == 1:
-        return rules[0]
-
-    combined_ast = rules[0]
-    for rule_ast in rules[1:]:
-        combined_ast = ASTNode(type="operator", value="OR", left=combined_ast, right=rule_ast)
-
-    return combined_ast
-
-
 class RuleEngine:
     def __init__(self):
         # Initialization logic
@@ -112,12 +96,17 @@ class RuleEngine:
             return False
 
 
-if __name__ == "__main__":
-    # Sample user data
+def main():
+    # Direct user input for user data
+    age = int(input("Enter age: "))
+    income = int(input("Enter income: "))
+    department = input("Enter department: ")
+
+    # Collecting user data into a dictionary
     user_data = {
-        'age': 30,
-        'income': 40000,
-        'department': 'Sales'
+        'age': age,
+        'income': income,
+        'department': department
     }
 
     # Create an instance of RuleEngine
@@ -127,8 +116,12 @@ if __name__ == "__main__":
     eligibility = engine.evaluate(user_data)
     print(f"User eligibility: {eligibility}")
 
-    # Example rule parsing and evaluation
-    rule_string = "age > 25 AND income > 30000"
+    # Get the rule from user input
+    rule_string = input("Enter the rule to evaluate (e.g., 'age > 25 AND income > 30000'): ")
     rule_ast = create_rule(rule_string)
     result = evaluate_rule(rule_ast, user_data)
     print(f"Rule evaluation result: {result}")
+
+
+if __name__ == "__main__":
+    main()
