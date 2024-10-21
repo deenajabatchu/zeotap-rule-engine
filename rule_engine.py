@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class ASTNode:
     def __init__(self, type, value=None, left=None, right=None):
         """
@@ -93,7 +93,7 @@ def combine_rules(rules):
     for rule_ast in rules[1:]:
         combined_ast = ASTNode(type="operator", value="OR", left=combined_ast, right=rule_ast)
 
-=======
+
 class ASTNode:
     def __init__(self, type, value=None, left=None, right=None):
         """
@@ -188,5 +188,4 @@ def combine_rules(rules):
     for rule_ast in rules[1:]:
         combined_ast = ASTNode(type="operator", value="OR", left=combined_ast, right=rule_ast)
 
->>>>>>> e5fef81 (Initial commit with rule engine code)
     return combined_ast
