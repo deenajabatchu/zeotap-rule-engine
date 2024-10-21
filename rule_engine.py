@@ -189,3 +189,18 @@ def combine_rules(rules):
         combined_ast = ASTNode(type="operator", value="OR", left=combined_ast, right=rule_ast)
 
     return combined_ast
+class RuleEngine:
+    def __init__(self):
+        # Initialization logic
+        pass
+
+    def evaluate(self, user_data):
+        # Example eligibility logic (replace with actual rules)
+        if user_data['age'] > 25 and user_data['income'] > 30000:
+            return True
+        else:
+            return False
+    
+    
+    
+    
